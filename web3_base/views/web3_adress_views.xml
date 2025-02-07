@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- base inherit -->
+    <record id="shopfloor_profile_tree_view" model="ir.ui.view">
+        <field name="name">shopfloor.profile.tree</field>
+        <field name="model">shopfloor.profile</field>
+        <field name="inherit_id" ref="shopfloor_base.shopfloor_profile_tree_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="workcenter_id" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
