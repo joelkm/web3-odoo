@@ -1,7 +1,7 @@
 from odoo import models, fields, api
 
 class Web3Transaction(models.Model):
-    _inherit = "web3.transaction"
+    _name = "web3.transaction"
 
     name = fields.Char(string="Name", required=True, readonly=True, default='Draft transaction')
 

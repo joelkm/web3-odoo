@@ -1,7 +1,7 @@
 from odoo import models, fields, api
 
 class ResCurrency(models.Model):
-    _inherit = 'res.currency'
+    _name = 'res.currency'
 
     is_crypto = fields.Boolean('Cryptocurrency', default=False)
 

@@ -1,9 +1,11 @@
 from odoo import models, fields, api
 
 class Web3Network(models.Model):
-    _inherit = "web3.blockchain"
+    _name = "web3.blockchain"
 
     name = fields.Char(string="Name", required=True)
+
+    short_name = fields.Char(string="Short Name", required=True)
 
     main_currency_id = fields.Many2one("web3.currency", string="Main Currency")
 
@@ -11,6 +13,8 @@ class Web3Network(models.Model):
     node_ids = fields.One2many('web3.node', 'network_id', string='Node')
 
     rpc_url = fields.Char(string="RPC URL", compute='_compute_rpc_url')
+
+    # TODO: SUBNET system as parent-childs??
 
 
     @api.depends('node_ids, node_ids.rpc_url, node_ids.sequence')

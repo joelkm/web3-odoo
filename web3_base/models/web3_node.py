@@ -1,7 +1,9 @@
 from odoo import models, fields, api
 
 class Web3Node(models.Model):
-    _inherit = "web3.node"
+    _name = "web3.node"
+
+    name = fields.Char(string='Name')
 
     network_id = fields.Many2one('web3.network', string='Network')
 
