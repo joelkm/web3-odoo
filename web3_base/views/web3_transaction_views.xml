@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="web3_transaction_view_tree" model="ir.ui.view">
+        <field name="name">web3.transaction.tree</field>
+        <field name="model">web3.transaction</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                
+            </tree>
+        </field>
+    </record>
+
+</odoo>

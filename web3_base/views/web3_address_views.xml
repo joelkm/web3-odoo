@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- base inherit -->
+    <record id="web3_address_view_tree" model="ir.ui.view">
+        <field name="name">web3.address.tree</field>
+        <field name="model">web3.address</field>
+        <field name="arch" type="xml">
+            <tree string="Addresses">
+                <field name="public_key" />
+                <field name="type" />
+                <field name="network_id" />
+                <!-- TODO: Something to differentiate the owner or currency -->
+            </tree>
+        </field>
+    </record>
+
+    <record id="web3_address_view_form" model="ir.ui.view">
+        <field name="name">web3.address.form</field>
+        <field name="model">web3.address</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <!-- <header>
+
+                </header> -->
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="public_key" />
+                        </h1>
+                    </div>
+                    <group name="address_details">
+                        <field name="type" />
+                        <field name="network_id" />
+                        <field name="partner_id" />
+                        <field name="currency_id" />
+                        <field name="note" />
+                    </group>
+                    <notebook>
+                        <page name="balance" string="Balance">
+                            <field name="balance_line_ids">
+                                <tree>
+                                    <field name="currency_id" />
+                                    <field name="amount" />
+                                    <field name="token_address_id" optional="hide"/>
+                                    <!-- TODO: Button to send to someone, just if ownership -->
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

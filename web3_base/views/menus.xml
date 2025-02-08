@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- TODO: Add web icon -->
+    <menuitem
+        id="menu_web3_root"
+        name="Web3"
+        sequence="100"
+    />
+
+    <!-- Addresses -->
+    <menuitem
+        id="model_name_menu"
+        name="name"
+        action="action_id"
+        groups="groups_id"
+        parent="parent_id"
+        sequence="10"/>
+    <!-- Transactions -->
+    
+    <menuitem
+        id="action_menu"
+        name="name"
+        action="action_id"
+        groups="groups_id"
+        parent="parent_id"
+        sequence="10"/>
+
+    <!-- Config:
+        - Nodes
+        - Networks
+        - Currency
+     -->
+
+</odoo>
