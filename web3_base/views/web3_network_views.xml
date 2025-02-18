@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="web3_network_view_tree" model="ir.ui.view">
+        <field name="name">web3.network.tree</field>
+        <field name="model">web3.network</field>
+        <field name="arch" type="xml">
+            <tree string="Networks">
+                <field name="name" />
+                <field name="main_currency_id" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="web3_network_view_form" model="ir.ui.view">
+        <field name="name">web3.network.form</field>
+        <field name="model">web3.network</field>
+        <field name="arch" type="xml">
+            <form string="Network">
+                <sheet>
+                    <group name="network_details">
+                        <field name="name" />
+                        <field name="rpc_url" />
+                        <field name="main_currency_id" />
+                        <field name="node_ids" >
+                            <tree>
+                                <field name="name" />
+                                <field name="url" />
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="web3_network_node_view_tree" model="ir.ui.view">
+        <field name="name">web3.network.node.tree</field>
+        <field name="model">web3.network.node</field>
+        <field name="arch" type="xml">
+            <tree string="Networks">
+                <field name="name" />
+                <field name="main_currency_id" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="web3_network_node_view_form" model="ir.ui.view">
+        <field name="name">web3.network.node.form</field>
+        <field name="model">web3.network.node</field>
+        <field name="arch" type="xml">
+            <form string="Network">
+                <sheet>
+                    <group name="network_details">
+                        <field name="name" />
+                        <field name="rpc_url" />
+                        <field name="main_currency_id" />
+                        <field name="node_ids" >
+                            <tree>
+                                <field name="name" />
+                                <field name="url" />
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

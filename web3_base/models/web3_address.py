@@ -26,7 +26,9 @@ class Web3Address(models.Model):
     currency_id = fields.Many2one('res.currency', string='currency')
 
     # TODO: Review widespread company usage
-    owner_user_ids = fields.Many2many('res.users', string='Owners')
+    # Rethink ownership model
+    # Option 1:
+    # Selection field for company owned or user owned and fields (m2m??)
 
     note = fields.Text(string="Note")
 
@@ -37,6 +39,8 @@ class Web3Address(models.Model):
     total_balance = fields.Float(string="Total Balance", compute='_compute_total_balance')
 
     total_balance_currency_id = fields.Many2one('res.currency', string="Currency", compute='_compute_total_balance')
+
+    # TODO: Support for ERC standards??
 
     @api.depends('network_id')
     def _compute_display_name(self):

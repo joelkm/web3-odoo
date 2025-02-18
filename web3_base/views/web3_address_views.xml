@@ -10,7 +10,8 @@
                 <field name="public_key" />
                 <field name="type" />
                 <field name="network_id" />
-                <!-- TODO: Something to differentiate the owner or currency -->
+                <field name="partner_id" />
+                <field name="currency_id" />
             </tree>
         </field>
     </record>
